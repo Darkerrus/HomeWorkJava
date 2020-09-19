@@ -44,7 +44,19 @@ class Dog
 }
 class DogKennel {
 
-    ArrayList<Dog> dog = new ArrayList<Dog>();
+    ArrayList<Dog> dogs = new ArrayList<Dog>();
+    public void addDog(Dog a)
+	{
+		this.dogs.add(a);
+	}
+
+	public void printDogs()
+	{
+		for(Dog a: dogs)
+		{
+			System.out.println(a);
+		}
+	}
 
 }
 
@@ -54,16 +66,13 @@ public class Main {
         Dog dog = new Dog("Kostya",14);
         String str = dog.toString();
         System.out.println(str);
-        DogKennel names = new DogKennel();
-        Dog Jack = new Dog("Jack", 10);
-        Dog Artem = new Dog("Artem", 13);
-        Dog Daniel = new Dog("Daniel", 12);
-        Dog Stepan = new Dog("Stepan", 19);
-        names.dog.add(Jack);
-        names.dog.add(Artem);
-        names.dog.add(Daniel);
-        names.dog.add(Stepan);
-
+        DogKennel dogk = new DogKennel();
+        Dog Vasya = new Dog("Vasya", 15);
+        Dog Kolya = new Dog("Kolya", 15);
+        Dog Danil = new Dog("Danil", 15);
+        dogk.addDog(Vasya);
+        dogk.addDog(Kolya);
+        dogk.addDog(Danil);
 
 
         System.out.println("Задание 1");
